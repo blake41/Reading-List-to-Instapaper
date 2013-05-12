@@ -28,8 +28,8 @@ lastrun_dt = DateTime.parse(lastrun)
 
 # Instapaper API stuff
 instapaper = 'www.instapaper.com'
-insta_user = 'blake41@gmail.com'
-insta_pass = 'monika99'
+insta_user = 'your instapaper email'
+insta_pass = 'your instapaper pass'
 
 # My Array of Links to send to Instapaper
 links = Array.new
