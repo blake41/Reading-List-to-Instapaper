@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require 'bundler/setup'
 
 require 'net/https'
@@ -29,7 +27,7 @@ lastrun_dt = DateTime.parse(lastrun)
 # Instapaper API stuff
 instapaper = 'www.instapaper.com'
 insta_user = 'blake41@gmail.com'
-insta_pass = 'monika99'
+insta_pass = 'p4gQBeKw!2x%1wo$'
 
 # My Array of Links to send to Instapaper
 links = Array.new
@@ -64,10 +62,12 @@ links.each do |url|
   http = Net::HTTP.new(instapaper, 443)
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+  http.ca_file = '/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt' if File.exists?('/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt')
   query_string = "/api/add?url=#{url}"
   request = Net::HTTP::Get.new(query_string)
   request.basic_auth(insta_user, insta_pass)
   response = http.request(request)
+  puts "#{url} #{response.code}"
 
   # Throw up a growl message
   # The icon stuff doesn't work. Not sure why yet
