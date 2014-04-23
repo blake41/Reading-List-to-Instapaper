@@ -1,0 +1,8 @@
+#!/bin/bash
+# usage: _rvmruby <ruby version> [ruby arguments]
+  
+[ -s "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm"
+
+ruby_version=$1; shift
+rvm use $ruby_version
+exec ruby "$@"

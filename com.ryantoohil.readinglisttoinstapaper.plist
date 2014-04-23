@@ -7,18 +7,18 @@
             <key>LowPriorityIO</key>
             <true/>
             <key>ProgramArguments</key>
-                    <array>
-                            <string>/bin/_rvmruby</string>
-                            <string>1.9.3</string>
-                            <string>/Users/blake/Documents/Development/Reading-List-to-Instapaper/readinglist_to_instapaper.rb</string>
-                    </array>
+            <array>
+                    <string>/Users/blake/bin/_rvmruby</string>
+                    <string>2.0</string>
+                    <string>/Users/blake/Documents/Development/Reading-List-to-Instapaper/readinglist_to_instapaper.rb</string>
+            </array>
             <key>WatchPaths</key>
             <array>
               <string>/Users/blake/Library/Safari/Bookmarks.plist</string>
             </array>
             <key>StandardOutPath</key>
-            <string>/Users/blake/Documents/NightlyRSyncBackup.out</string>
+            <string>/Users/blake/Documents/ReadingList.out</string>
             <key>StandardErrorPath</key>
-            <string>/Users/blake/Documents/NightlyRSyncBackup.err</string>
+            <string>/Users/blake/Documents/ReadingList.err</string>
     </dict>
     </plist>

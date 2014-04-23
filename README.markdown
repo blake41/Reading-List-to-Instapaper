@@ -25,3 +25,19 @@ I'll clean this up as I go. Please feel free to add issues or pull requests. I h
 ## Revisions
 * Mar 31, 2012: Initial Commit
 * May 6, 2012: Removed rails dependency and cleaned up DateTime usage. I think.
+
+## Blakes Notes
+* the file we want to run from the launchctl is _rvmruby
+* that script should be a bash script which loads rvm as a function into the shell
+* it should take arguments from the plist file as to what version of ruby it should use
+* it should take arguments as to the absolute path of the actual ruby script
+* all gems need to be installed in that version of ruby
+* the _rvmruby file must have the correct permissions set
+* you must load the script first (launchctl load com.ryan...)
+* then you have to actually run it (launchctl start readinglisttoinstapaper)
+* check the exit code to make sure its 0
+* if the rvmruby script cant run you wont get any debug output
+* once that is running you can add debug info to the shell script
+* once the ruby script is running you can get debug output in the ~/Documents/Readinglist.err and .out
+* the plist file should go in the /Users/blake/Library/LaunchAgents
+* 
